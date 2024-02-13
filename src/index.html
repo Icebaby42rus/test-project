@@ -26,7 +26,7 @@
         <div class="line"></div>
       </div>
       <div class="header__menu-content">
-        <div class="content-wrapper">       
+        <div class="content-wrapper">
           <!-- <div class="content-bg"></div> -->
           <div class="content-logo">
             <img src="./img/logo.svg" alt="#">
@@ -56,13 +56,99 @@
   </header>
   <nav class="navigation">
     <ul>
-      <li><a href="#">Напутственное слово</a></li>
-      <li><a href="#">Сетка</a></li>
+      <li><a href="#intro">Напутственное слово</a></li>
+      <li><a href="#grid">Сетка</a></li>
       <li><a href="#">Типографика</a></li>
       <li><a href="#">UI</a></li>
-  </ul>
+    </ul>
   </nav>
-  <main class="content">content</main>
+  <main class="content">
+    <section class="intro" id="intro">
+      <h1>Тестовое задание</h1>
+      <h3>Уровень: junior</h3>
+      <p class="intro-text">Привет! Твоё тестовое задание — грамотно заверстать эту прекрасную страничку. В шапке
+        страницы укажи своё ФИО,
+        так всем будет удобнее. В менюхе под иконкой бургером мы хотели бы также видеть твои данные. Ну что, поехали?
+      </p>
+    </section>
+
+    <section class="grid">
+      <h2 id="grid">Сетка</h2>
+      <p class="grid-text">Задание предполагает адаптивную вёрстку. Используется 3 состояния в зависимости от устройства. Сетка
+        «резиновая» — переменной ширины.</p>
+      <h3>Десктоп (1200+)</h3>
+      <div class="grid-parameters">
+        <div class="parameter-content">
+          <div class="parameter-title">Контент</div>
+          <div class="parameter-value">1072–1312</div>
+        </div>
+        <div class="parameter-columns">
+          <div class="parameter-title">Колонок</div>
+          <div class="parameter-value">12</div>
+        </div>
+        <div class="parameter-width">
+          <div class="parameter-title">Ширина колонки</div>
+          <div class="parameter-value">60-80</div>
+        </div>
+        <div class="parameter-apostolic">
+          <div class="parameter-title">Межколонник</div>
+          <div class="parameter-value">32</div>
+        </div>
+      </div>
+      <div class="grid-image">
+        <img src="/src/img/pic_desktop.jpg" alt="desktop">
+      </div>
+
+      <h3>Планшет (736+)</h3>
+      <div class="grid-parameters">
+        <div class="parameter-content">
+          <div class="parameter-title">Контент</div>
+          <div class="parameter-value">672–928</div>
+        </div>
+        <div class="parameter-columns">
+          <div class="parameter-title">Колонок</div>
+          <div class="parameter-value">8</div>
+        </div>
+        <div class="parameter-width">
+          <div class="parameter-title">Ширина колонки</div>
+          <div class="parameter-value">56-88</div>
+        </div>
+        <div class="parameter-apostolic">
+          <div class="parameter-title">Межколонник</div>
+          <div class="parameter-value">32</div>
+        </div>
+      </div>
+      <div class="grid-image">
+        <img src="/src/img/pic_tab.jpg" alt="tab">
+      </div>
+
+      <h3>Телефон (320+)</h3>
+      <div class="grid-parameters">
+        <div class="parameter-content">
+          <div class="parameter-title">Контент</div>
+          <div class="parameter-value">296–424</div>
+        </div>
+        <div class="parameter-columns">
+          <div class="parameter-title">Колонок</div>
+          <div class="parameter-value">4</div>
+        </div>
+        <div class="parameter-width">
+          <div class="parameter-title">Ширина колонки</div>
+          <div class="parameter-value">56-88</div>
+        </div>
+        <div class="parameter-apostolic">
+          <div class="parameter-title">Межколонник</div>
+          <div class="parameter-value">24</div>
+        </div>
+      </div>
+      <div class="grid-image">
+        <img src="/src/img/pic_mob.jpg" alt="mob">
+      </div>
+    </section>
+
+    <section class="typography"></section>
+    <section class="ui"></section>
+  </main>
 </body>
 
 </html>

@@ -1,4 +1,25 @@
 .content {
 	grid-area: content;
-	background-color: lightcoral;
+	h3 {
+		margin: 16px 0 64px;
+	}
+	.intro-text,
+	.grid-text {
+		display: grid;
+  	grid-template-columns: 2fr 1fr;
+	}
+	.grid-parameters {
+		display: grid;
+  	grid-template-columns: repeat(4, 1fr);
+		margin-bottom: 48px;
+		.parameter-value {
+			margin-top: 8px;
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+	.grid-image img {
+		width: 100%;
+	}
+
 }
