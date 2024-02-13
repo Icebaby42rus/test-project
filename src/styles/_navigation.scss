@@ -1,4 +1,18 @@
 .navigation {
 	grid-area: nav;
-	background-color: lightgreen;
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-top: 112px;
+		a {
+			color: $text-gray;
+			&:hover {
+				color: $text;
+			}
+			&:active {
+				color: $link-active
+			}
+		}
+	}
 }
