@@ -12,6 +12,7 @@
 		.content {
 			grid-column: span 4;
 		}
+		padding: 0 10px;
 	}
 }
 
@@ -19,6 +20,7 @@
 	body {
 		grid-template-columns: repeat(8, minmax(56px, 88px));
 		grid-column-gap: 32px;
+		padding: 0 12px;
 		.header {
 			grid-column: span 8;
 		}
@@ -35,6 +37,7 @@
 	body {
 		grid-template-columns: repeat(12, minmax(60px, 80px));
 		grid-column-gap: 32px;
+		padding: 0 15px;
 		.header {
 			grid-column: span 12;
 		}
