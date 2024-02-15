@@ -74,7 +74,8 @@
 
     <section class="grid">
       <h2 id="grid">Сетка</h2>
-      <p class="grid-text">Задание предполагает адаптивную вёрстку. Используется 3 состояния в зависимости от устройства. Сетка
+      <p class="grid-text">Задание предполагает адаптивную вёрстку. Используется 3 состояния в зависимости от
+        устройства. Сетка
         «резиновая» — переменной ширины.</p>
       <h3>Десктоп (1200+)</h3>
       <div class="grid-parameters">
@@ -146,8 +147,116 @@
       </div>
     </section>
 
-    <section class="typography"></section>
-    <section class="ui"></section>
+    <section class="typography" id="typography">
+      <h2 class="typography-title">Типографика</h2>
+      <p class="typography-text">Используется шрифт Graphik. На телефонах стили типографики переопределяются
+      </p>
+      <div class="typography-tabs">
+        <div class="tabs-navigation">
+          <input checked id="tab-desktop" name="tab" type="radio" value="">
+          <label class="tab-label" for="tab-desktop">Десктоп</label>
+          <input id="tab-mobile" name="tab" type="radio" value="">
+          <label class="tab-label" for="tab-mobile">Телефон</label>
+        </div>
+        <div class="tabs-content">
+          <div class="tab-content active" id="desktop-content">
+            <div class="tab-content-item desktop">
+              <div>Заголовок H1, 48/56, bold</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item desktop">
+              <div>Заголовок H2, 32/40, bold</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item desktop">
+              <div>Заголовок H3, 24/32, medium</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item desktop">
+              <div>Заголовок H4, 18/28, medium</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item desktop">
+              <div>Лид P_Lead, 24/32, regular</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item desktop">
+              <div>Крупный текст P_18, 18/28, regular</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item desktop">
+              <div>Основной текст P_16, 16/24, regular</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item desktop">
+              <div>Впомогательный текст P_14, 14/20, regular</div>
+              <div>Текст заголовка</div>
+            </div>
+          </div>
+          <div class="tab-content" id="mobile-content">
+            <div class="tab-content-item mobile">
+              <div>Заголовок H1, 32/40, bold</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item mobile">
+              <div>Заголовок H2, 28/36, bold</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item mobile">
+              <div>Заголовок H3, 20/28, medium</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item mobile">
+              <div>Заголовок H4, 18/28, medium</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item mobile">
+              <div>Лид P_Lead, 20/28, regular</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item mobile">
+              <div>Крупный текст P_18, 18/28, regular</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item mobile">
+              <div>Основной текст P_16, 16/24, regular</div>
+              <div>Текст заголовка</div>
+            </div>
+            <div class="tab-content-item mobile">
+              <div>Впомогательный текст P_14, 14/20, regular</div>
+              <div>Текст заголовка</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ui">
+      <h2>UI</h2>
+      <h3 class="ui-subtitle">Текстовое поле</h3>
+      <div class="ui-field">
+        <div class="general-field">
+          <input id="general-field" name="general" placeholder="E-mail" type="email"/>
+          <label for="general">E-mail</label>
+          <span class="text-error">Текст ошибки</span>
+        </div>
+        <div class="hover-field">
+          <span class="field-title">Ховер</span>
+          <input name="hover" placeholder="E-mail" disabled/>
+          <label for="hover">E-mail</label>
+        </div>
+        <div class="input-field">
+          <span class="field-title">Ввод</span>
+          <input name="focus" placeholder="office@make.st" disabled/>
+          <label for="focus">E-mail</label>
+        </div>
+        <div class="error-field invalid">
+          <span class="field-title">Ошибка</span>
+          <input name="error" placeholder="office@make.st" disabled/>
+          <label for="error">E-mail</label>
+          <span class="text-error">Текст ошибки</span>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 
