@@ -40,4 +40,14 @@ img {
 input {
 	outline: 0;
 	border: 0;
+	&::placeholder {
+		font-size: 16px;
+		color: $text;
+		opacity: 1;
+	}
+}
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
 }

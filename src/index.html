@@ -51,9 +51,8 @@
         </div>
       </div>
     </div>
-
-
   </header>
+
   <nav class="navigation">
     <ul>
       <li><a href="#intro">Напутственное слово</a></li>
@@ -62,6 +61,7 @@
       <li><a href="#">UI</a></li>
     </ul>
   </nav>
+
   <main class="content">
     <section class="intro" id="intro">
       <h1>Тестовое задание</h1>
@@ -71,7 +71,6 @@
         так всем будет удобнее. В менюхе под иконкой бургером мы хотели бы также видеть твои данные. Ну что, поехали?
       </p>
     </section>
-
     <section class="grid">
       <h2 id="grid">Сетка</h2>
       <p class="grid-text">Задание предполагает адаптивную вёрстку. Используется 3 состояния в зависимости от
@@ -146,7 +145,6 @@
         <img src="/src/img/pic_mob.jpg" alt="mob">
       </div>
     </section>
-
     <section class="typography" id="typography">
       <h2 class="typography-title">Типографика</h2>
       <p class="typography-text">Используется шрифт Graphik. На телефонах стили типографики переопределяются
@@ -233,31 +231,161 @@
     <section class="ui">
       <h2>UI</h2>
       <h3 class="ui-subtitle">Текстовое поле</h3>
-      <div class="ui-field">
-        <div class="general-field">
-          <input id="general-field" name="general" placeholder="E-mail" type="email"/>
+      <div class="ui-field ui-area">
+        <div class="general-field input">
+          <input id="general-field" name="general" placeholder="E-mail" type="email" />
           <label for="general">E-mail</label>
           <span class="text-error">Текст ошибки</span>
         </div>
-        <div class="hover-field">
+        <div class="hover-field input">
           <span class="field-title">Ховер</span>
-          <input name="hover" placeholder="E-mail" disabled/>
+          <input name="hover" placeholder="E-mail" disabled />
           <label for="hover">E-mail</label>
         </div>
-        <div class="input-field">
+        <div class="input-field input">
           <span class="field-title">Ввод</span>
-          <input name="focus" placeholder="office@make.st" disabled/>
+          <input name="focus" placeholder="office@make.st" disabled />
           <label for="focus">E-mail</label>
         </div>
-        <div class="error-field invalid">
+        <div class="error-field input invalid">
           <span class="field-title">Ошибка</span>
-          <input name="error" placeholder="office@make.st" disabled/>
+          <input name="error" placeholder="office@make.st" disabled />
           <label for="error">E-mail</label>
           <span class="text-error">Текст ошибки</span>
         </div>
       </div>
+      <h3 class="ui-subtitle">Выпадающий список</h3>
+      <div class="ui-description">Компонент состоит из текстового поля и выпадающей подсказки</div>
+      <div class="ui-dropdown ui-area">
+        <div class="general-dropdown dropdown js_dropdown">
+          <input id="general-dropdown" class="text-box" name="general" type="text" placeholder="Выберите что-нибудь"
+            readonly>
+          <label for="general">Выберите что-нибудь</label>
+          <div class="options js_options">
+            <div class="options-item" data-value="Первый стул">Первый стул</div>
+            <div class="options-item" data-value="Второй стул">Второй стул</div>
+            <div class="options-item" data-value="Выбранный пункт">Выбранный пункт</div>
+            <div class="options-item" data-value="Теорема Эскобара">Теорема Эскобара</div>
+          </div>
+        </div>
+        <div class="hover-dropdown dropdown">
+          <input class="text-box" name="hover" type="text" placeholder="Выберите что-нибудь" readonly disabled>
+          <label for="hover">Выберите что-нибудь</label>
+          <div class="options">
+            <div class="options-item" data-value="Первый стул">Первый стул</div>
+            <div class="options-item" data-value="Второй стул">Второй стул</div>
+            <div class="options-item" data-value="Выбранный пункт">Выбранный пункт</div>
+            <div class="options-item" data-value="Теорема Эскобара">Теорема Эскобара</div>
+          </div>
+        </div>
+        <div class="opened-dropdown dropdown active">
+          <input class="text-box" name="opened" type="text" placeholder="Выберите что-нибудь" value="Выбранный пункт"
+            readonly disabled>
+          <label for="opened">Выберите что-нибудь</label>
+          <div class="options">
+            <div class="options-item" data-value="Первый стул">Первый стул</div>
+            <div class="options-item" data-value="Второй стул">Второй стул</div>
+            <div class="options-item" data-value="Выбранный пункт">Выбранный пункт</div>
+            <div class="options-item" data-value="Теорема Эскобара">Теорема Эскобара</div>
+          </div>
+        </div>
+      </div>
+      <h3 class="ui-subtitle">Кнопка</h3>
+      <div class="ui-button ui-area">
+        <div class="genearal-button button-wrapper">
+          <button type="button" class="button">Отправить</button>
+        </div>
+        <div class="hover-button button-wrapper">
+          <span class="button-state">Ховер</span>
+          <button type="button" class="button">Отправить</button>
+        </div>
+        <div class="active-button button-wrapper">
+          <span class="button-state">Нажата</span>
+          <button type="button" class="button">Отправить</button>
+        </div>
+        <div class="disabled-button button-wrapper">
+          <span class="button-state">Неактивна</span>
+          <button type="button" class="button" disabled>Отправить</button>
+        </div>
+      </div>
+      <h3 class="ui-subtitle">Чекбокс, радиобаттон</h3>
+      <div class="ui-checkboxs ui-area">
+        <div class="checkbox-wrapper">
+          <label class="general-checkbox checkbox">
+            <span class="text">Выбери меня</span>
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="hover-checkbox checkbox">
+            <span class="text">Выбери меня</span>
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="checked-checkbox checkbox">
+            <span class="text">Птица счастья завтрашнего дня</span>
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="radio-wrapper">
+          <label class="general-radio radio js_radio">
+            <span class="text">Пластмассовый мир победил</span>
+            <input type="radio" name="radio">
+            <span class="checkmark js_checkmark"></span>
+          </label>
+          <label class="hover-radio radio">
+            <span class="text">Пластмассовый мир победил</span>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="checked-radio radio">
+            <span class="text">Последний кораблик остыл</span>
+            <input type="radio" name="radio" checked>
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <h3 class="ui-subtitle">Аккордеон</h3>
+      <div class="ui-accordion">
+        <button class="accordion-btn js_accordion-btn">Аккордеон</button>
+        <div class="panel">
+          <p>Гоpдость полными вагонами золотыми погонами<br>
+            С юга дyют молодые вет…<br>
+            Pазpывая в клочья облака не забыли шлют из далека<br>
+            С дома мама И не последняя любовь<br>
+            А по небy бегyт видишь чьи-то следы<br>
+            Это может быть ты это может быть я<br>
+            Это может наш дрyг<br>
+            Это может нам поют свои</p>
+        </div>
+        <button class="accordion-btn hover-accordion">Аккордеон</button>
+        <div class="panel">
+          <p>Гоpдость полными вагонами золотыми погонами<br>
+            С юга дyют молодые вет…<br>
+            Pазpывая в клочья облака не забыли шлют из далека<br>
+            С дома мама И не последняя любовь<br>
+            А по небy бегyт видишь чьи-то следы<br>
+            Это может быть ты это может быть я<br>
+            Это может наш дрyг<br>
+            Это может нам поют свои</p>
+        </div>
+        <button class="accordion-btn active-accordion active">Аккордеон</button>
+        <div class="panel active">
+          <p>Гоpдость полными вагонами золотыми погонами<br>
+            С юга дyют молодые вет…<br>
+            Pазpывая в клочья облака не забыли шлют из далека<br>
+            С дома мама И не последняя любовь<br>
+            А по небy бегyт видишь чьи-то следы<br>
+            Это может быть ты это может быть я<br>
+            Это может наш дрyг<br>
+            Это может нам поют свои</p>
+        </div>
+      </div>
     </section>
-  </main>
-</body>
 
+    <div class="win">Победа! 😜</div>
+  </main>
+
+  
+</body>
 </html>
