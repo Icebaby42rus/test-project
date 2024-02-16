@@ -3,6 +3,9 @@
 @import './sections/typography.scss';
 @import './sections/ui.scss';
 
+/**
+* Основной блок с контентом страницы
+*/
 .content {
 	grid-area: content;
 	.text-level {

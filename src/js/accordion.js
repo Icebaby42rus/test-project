@@ -1,3 +1,10 @@
+/**
+ * Перебираем каждый элемент аккордеона и добавляем к нему обработчики событий для переключения его состояния по клику.
+ *
+ * @event click
+ * @type {accordionClickCallback}
+ * @listens accordion
+ */
 document.addEventListener('DOMContentLoaded', function() {
   const accordions = document.querySelectorAll('.js_accordion-btn');
 

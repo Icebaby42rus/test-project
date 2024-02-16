@@ -1,3 +1,4 @@
+// Разрешение для мобильного
 @media screen and (max-width: 736px) {
 	h1 {
 		@each $property, $value in $font-styles-h1-mobile {
@@ -112,7 +113,7 @@
 		}
 	}
 }
-
+// Дополнительный брейкпоинт для не больших устройств
 @media screen and (max-width: 856px) {
 	body {
 		grid-template-rows: auto auto 1fr;
@@ -148,7 +149,7 @@
 		}
 	}
 }
-
+// Разрешение для планшета
 @media screen and (min-width: 736px) {
 	body {
 		grid-template-columns: repeat(8, minmax(56px, 88px));
@@ -178,7 +179,7 @@
 		}
 	}
 }
-
+// Разрешение для десктопа
 @media screen and (min-width: 1200px) {
 	body {
 		grid-template-columns: repeat(12, minmax(60px, 80px));

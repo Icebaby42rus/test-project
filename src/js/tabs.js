@@ -1,3 +1,10 @@
+/**
+ * Функция является слушателем события "DOMContentLoaded", которая выбирает коллекцию вкладок и показывает соответсвующий контент.
+ * А также, делает первую вкладку активной при загрузке документа.
+ * @event DOMContentLoaded
+ * @type {Function}
+ * @listens document
+ */
 document.addEventListener('DOMContentLoaded', function () {
 	const tabs = document.querySelectorAll('.tabs-navigation input[type="radio"]')
 	const tabContents = document.querySelectorAll('.tab-content')
