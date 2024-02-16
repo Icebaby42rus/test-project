@@ -17,4 +17,9 @@ npm run build-prod
 ```shell
 npm run clear
 ```
+
+### Запуск генерирования js документации
+```shell
+npm run generate-docs
+```
  
