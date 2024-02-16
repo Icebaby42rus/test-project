@@ -55,7 +55,7 @@ input {
 		@each $property, $value in $font-styles-p16 {
 			#{$property}: $value;
 		}
-		color: $text-black;
+		color: $basic-black;
 		opacity: 1;
 	}
 }

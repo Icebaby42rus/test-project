@@ -15,7 +15,7 @@
 			#{$property}: $value;
 		}
 		&-firstname {
-			color: $text-gray;
+			color: $basic-gray;
 		}
 	}
 	&__menu {
@@ -37,7 +37,7 @@
 				height: 2px;
 				width: 32px;
 				display: block;
-				background-color: $text-black;
+				background-color: $basic-black;
 			}
 			.line:nth-of-type(2) {
 				margin: 6px 0 0;
@@ -81,13 +81,13 @@
 					grid-column: span 4;
 					.info-heading {
 						margin: 10px 0 60px;
-						color: $text-gray;
+						color: $basic-gray;
 					}
 					.info-about {
 						.fio {
 							display: flex;
 							flex-direction: column;
-							color: $text-black;
+							color: $basic-black;
 						}
 						.description {
 							margin: 24px 0 32px;
@@ -123,7 +123,7 @@
 							}
 						}
 						.link-text {
-							color: $text-blue;
+							color: $basic-blue;
 						}
 					}
 				}

@@ -1,0 +1,46 @@
+.ui-button {
+	margin-bottom: 64px;
+	.button-wrapper {
+		position: relative;
+		.button-state {
+			position: absolute;
+			top: -42px;
+			color: $basic-gray;
+			@each $property, $value in $font-styles-p14 {
+				#{$property}: $value;
+			}
+		}
+		.button {
+			width: 148px;
+			height: 56px;
+			background: linear-gradient(45deg, #dd80ed 0%, #3d28e3 100%);
+			border-radius: 36px;
+			border: none;
+			@each $property, $value in $font-styles-p16 {
+				#{$property}: $value;
+			}
+			color: white;
+			transition: all 0.3s;
+			cursor: pointer;
+			&:hover {
+				background: linear-gradient(225deg, #dd80ed 0%, #3d28e3 100%);
+			}
+			&:active {
+				background: linear-gradient(206.57deg, #dd80ed 0%, #3d28e3 83.33%);
+			}
+		}
+	}
+	.hover-button .button {
+		background: linear-gradient(225deg, #dd80ed 0%, #3d28e3 100%);
+		pointer-events: none;
+	}
+	.active-button .button {
+		background: linear-gradient(206.57deg, #dd80ed 0%, #3d28e3 83.33%);
+		pointer-events: none;
+	}
+	.disabled-button .button {
+		background: #cbcbcc;
+		pointer-events: none;
+		cursor: default;
+	}
+}

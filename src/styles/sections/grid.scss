@@ -1,0 +1,30 @@
+.grid-text {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	margin-top: 24px;
+	margin-bottom: 48px;
+}
+.grid-parameters {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 32px;
+	margin-bottom: 48px;
+	.parameter-title {
+		color: $basic-gray;
+		@each $property, $value in $font-styles-p14 {
+			#{$property}: $value;
+		}
+	}
+	.parameter-value {
+		margin-top: 8px;
+		@each $property, $value in $font-styles-lead-desktop {
+			#{$property}: $value;
+		}
+	}
+}
+.grid-image {
+	margin-bottom: 64px;
+	img {
+		width: 100%;
+	}
+}

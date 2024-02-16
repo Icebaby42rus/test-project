@@ -1,0 +1,74 @@
+.ui-field {
+	margin-bottom: 84px;
+	.input {
+		position: relative;
+		padding: 4px 0 6px;
+		transition: all 0.3s;
+		.field-title {
+			position: absolute;
+			top: -50px;
+			color: $basic-gray;
+			@each $property, $value in $font-styles-p14 {
+				#{$property}: $value;
+			}
+		}
+		label {
+			display: none;
+			position: absolute;
+			top: -18px;
+			color: $basic-gray;
+			@each $property, $value in $font-styles-p12 {
+				#{$property}: $value;
+			}
+		}
+		input {
+			width: 100%;
+			height: 24px;
+		}
+		input:not(:placeholder-shown) + label {
+			display: block;
+		}
+
+		.text-error {
+			display: none;
+			position: absolute;
+			bottom: -25px;
+			color: #e80f3b;
+			@each $property, $value in $font-styles-p14 {
+				#{$property}: $value;
+			}
+		}
+	}
+	.general-field {
+		border-bottom: 2px solid #aeadae;
+		&:hover {
+			border-bottom-color: $basic-blue;
+		}
+	}
+	.general-field.invalid,
+	.error-field {
+		border-bottom-color: #e80f3b;
+		.text-error {
+			display: block;
+		}
+		label {
+			color: #e80f3b;
+		}
+	}
+	.hover-field {
+		border-bottom: 2px solid $basic-blue;
+	}
+	.input-field {
+		border-bottom: 4px solid $basic-blue;
+		label {
+			display: block;
+		}
+	}
+	.error-field {
+		border-bottom: 4px solid #e80f3b;
+		label {
+			display: block;
+			color: #e80f3b;
+		}
+	}
+}

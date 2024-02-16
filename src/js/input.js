@@ -1,5 +1,5 @@
 let input = document.getElementById('general-field');
-let generalField = document.querySelector('.general-field');
+let generalField = document.querySelector('.js_general-field');
 
 input.oninput = function() {
   styleInput(4, "#3E29E3");

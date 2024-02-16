@@ -1,0 +1,89 @@
+.ui-dropdown {
+	margin-bottom: 232px;
+	.dropdown {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 12px;
+			right: 0;
+			z-index: 1;
+			width: 9px;
+			height: 6px;
+			transition: all 0.3s;
+			pointer-events: none;
+			background-image: url(/src/img/arrow.svg);
+			background-repeat: no-repeat;
+		}
+		input {
+			width: 100%;
+			padding: 4px 0 6px;
+			border-bottom: 2px solid #aeadae;
+			transition: all 0.3s;
+			color: $basic-black;
+			@each $property, $value in $font-styles-p16 {
+				#{$property}: $value;
+			}
+			cursor: pointer;
+			&:hover {
+				border-bottom-color: $basic-blue;
+			}
+		}
+		label {
+			display: none;
+			position: absolute;
+			top: -18px;
+			color: $basic-gray;
+			@each $property, $value in $font-styles-p12 {
+				#{$property}: $value;
+			}
+		}
+		.options {
+			display: none;
+			width: 100%;
+			position: absolute;
+			top: 36px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+			overflow: hidden;
+			&-item {
+				padding: 8px 24px 8px;
+				cursor: pointer;
+			}
+			&-item.selected {
+				color: #3d28e1;
+			}
+		}
+	}
+	.dropdown.selected {
+		label {
+			display: block;
+		}
+	}
+	.dropdown.active::before {
+		transform: rotate(180deg);
+	}
+	.dropdown.active .options {
+		display: block;
+	}
+
+	.general-dropdown .options-item:hover {
+		background-color: $basic-blue;
+		color: #fff;
+	}
+
+	.hover-dropdown input,
+	.opened-dropdown input {
+		border-bottom-color: $basic-blue;
+	}
+
+	.opened-dropdown label {
+		display: block;
+	}
+	.opened-dropdown .options > .options-item:nth-child(4) {
+		color: #fff;
+		background-color: $basic-blue;
+	}
+	.opened-dropdown .options > .options-item:nth-child(3) {
+		color: #3d28e1;
+	}
+}

@@ -6,12 +6,12 @@
 		gap: 16px;
 		margin-top: 171px;
 		a {
-			color: $text-gray;
+			color: $basic-gray;
 			&:hover {
-				color: $text-black;
+				color: $basic-black;
 			}
 			&:active {
-				color: $text-blue;
+				color: $basic-blue;
 			}
 		}
 	}

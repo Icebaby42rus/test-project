@@ -1,0 +1,63 @@
+.ui-accordion {
+	display: flex;
+	flex-direction: column;
+	.accordion-btn {
+		width: 100%;
+		position: relative;
+		padding-top: 18px;
+		padding-bottom: 19px;
+		border-bottom: 2px solid #aeadae;
+		transition: border-bottom 0.3s ease;
+		text-align: start;
+		color: $basic-gray;
+		@each $property, $value in $font-styles-p16 {
+			#{$property}: $value;
+		}
+		cursor: pointer;
+		&:hover {
+			color: $basic-black;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 24px;
+			right: 0;
+			z-index: 1;
+			width: 9px;
+			height: 6px;
+			transition: 0.3s;
+			pointer-events: none;
+			background-image: url(/src/img/arrow.svg);
+			background-repeat: no-repeat;
+		}	
+	}
+	.accordion-btn.active {
+		color: $basic-blue;
+		border-bottom: 2px solid transparent;
+		transition: border-bottom 0.3s ease;
+		&:before {
+			transform: rotate(180deg);
+		}
+	}
+	.panel {
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.3s ease-out;
+	}
+	.panel.active {
+		border-bottom: 2px solid #aeadae;
+		max-height: 500px;
+		&:after {
+			content: '';
+			display: block;
+			height: 30px;
+		}
+	}
+	.hover-accordion {
+		pointer-events: none;
+		color: $basic-black;
+	}
+	.active-accordion {
+		pointer-events: none;
+	}
+}

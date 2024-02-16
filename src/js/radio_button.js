@@ -1,6 +1,6 @@
 
 /**
- * This function is an event listener for the "DOMContentLoaded" event. It selects all radio buttons on the page and sets their "checked" property to false.
+ * Функция является слушателем события "DOMContentLoaded", которая выбирате все переключатели на странице и устанавливает свойство "checked" в false.
  */
 document.addEventListener("DOMContentLoaded", () => {
   const radioButtons = document.querySelectorAll('input[type="radio"]');
