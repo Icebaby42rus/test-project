@@ -8,10 +8,10 @@
 		a {
 			color: $text-gray;
 			&:hover {
-				color: $text;
+				color: $text-black;
 			}
 			&:active {
-				color: $link-active
+				color: $text-blue;
 			}
 		}
 	}
