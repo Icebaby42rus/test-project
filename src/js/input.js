@@ -1,23 +1,26 @@
-let input = document.getElementById('general-field')
+let input = document.getElementById('general-field');
+let generalField = document.querySelector('.general-field');
 
 input.oninput = function() {
-  document.querySelector('.general-field').style.borderBottomWidth = 4 + "px";
-  document.querySelector('.general-field').style.borderBottomColor = "#3E29E3";
+  styleInput(4, "#3E29E3");
 };
 
 input.onblur = function() {
-  document.querySelector('.general-field').style.borderBottomWidth = 2 + "px";
-  document.querySelector('.general-field').style.borderBottomColor = "#AEADAE";
-
+  styleInput(2, "#AEADAE");
+  
   if (!input.value.includes('@')) {
-    document.querySelector('.general-field').classList.add('invalid');
-    document.querySelector('.general-field').style.borderBottomWidth = 4 + "px";
-    document.querySelector('.general-field').style.borderBottomColor = "#E80F3B";
-  }
-}
-
-input.onfocus = function() {
-  if (document.querySelector('.general-field').classList.contains('invalid')) {
-    document.querySelector('.general-field').classList.remove('invalid');
+    generalField.classList.add('invalid');
+    styleInput(4, "#E80F3B");
   }
 };
+
+input.onfocus = function() {
+  if (generalField.classList.contains('invalid')) {
+    generalField.classList.remove('invalid');
+  }
+};
+
+function styleInput(borderWidth, borderColor) {
+  generalField.style.borderBottomWidth = borderWidth + "px";
+  generalField.style.borderBottomColor = borderColor;
+}

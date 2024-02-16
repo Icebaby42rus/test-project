@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const accordions = document.querySelectorAll('.js_accordion-btn');
 
   accordions.forEach(function(accordion) {
-    accordion.addEventListener('click', function() {
-      this.classList.toggle('active');
+    const panel = accordion.nextElementSibling;
 
-      const panel = this.nextElementSibling;
+    accordion.addEventListener('click', function() {
+      accordion.classList.toggle('active');
       panel.classList.toggle('active');
 
       if (panel.classList.contains('active')) {
