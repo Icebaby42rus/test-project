@@ -52,7 +52,9 @@ input {
 	outline: 0;
 	border: 0;
 	&::placeholder {
-		font-size: 16px;
+		@each $property, $value in $font-styles-p16 {
+			#{$property}: $value;
+		}
 		color: $text-black;
 		opacity: 1;
 	}

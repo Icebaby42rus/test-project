@@ -26,6 +26,7 @@
         <div class="line"></div>
       </div>
       <div class="header__menu-content">
+        <div class="content-bg"></div>
         <div class="content-wrapper">
           <div class="content-logo">
             <img src="./img/logo.svg" alt="#">
@@ -43,8 +44,17 @@
               <h4 class="phone">+7 (800) 555-35-35</h4>
             </div>
             <a class="info-link" href="https://t.me/pavel_rugal" target="_blank">
-              <!-- <img src="" alt=""> -->
-              <span>Ссылка на соцсеть/мессенджер</span>
+              <div class="link-icon">
+                <div class="svg-container">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12H0L0 0H6V2H2V10H10V6H12V12Z" fill="#3E29E3"/>
+                  </svg>
+                  <svg class="second-icon" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 0V6H4V2H0V0H6Z" fill="#3E29E3"/>
+                  </svg>
+                </div>
+              </div>
+              <span class="link-text">Ссылка на соцсеть/мессенджер</span>
             </a>
           </div>
         </div>
@@ -56,8 +66,8 @@
     <ul>
       <li><a href="#intro">Напутственное слово</a></li>
       <li><a href="#grid">Сетка</a></li>
-      <li><a href="#">Типографика</a></li>
-      <li><a href="#">UI</a></li>
+      <li><a href="#typography">Типографика</a></li>
+      <li><a href="#ui">UI</a></li>
     </ul>
   </nav>
 
@@ -227,7 +237,7 @@
         </div>
       </div>
     </section>
-    <section class="ui">
+    <section class="ui" id="ui">
       <h2>UI</h2>
       <h3 class="ui-subtitle">Текстовое поле</h3>
       <div class="ui-field ui-area">
@@ -384,7 +394,5 @@
 
     <div class="win">Победа! 😜</div>
   </main>
-
-  
 </body>
 </html>

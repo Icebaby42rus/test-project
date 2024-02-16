@@ -21,6 +21,12 @@
 		grid-template-columns: repeat(4, 1fr);
 		margin-top: 32px;
 		margin-bottom: 48px;
+		.parameter-title {
+			color: $text-gray;
+			@each $property, $value in $font-styles-p14 {
+				#{$property}: $value;
+			}
+		}
 		.parameter-value {
 			margin-top: 8px;
 			@each $property, $value in $font-styles-lead-desktop {
@@ -30,6 +36,9 @@
 	}
 	.grid-image {
 		margin-bottom: 64px;
+		img {
+			width: 100%;
+		}
 	}
 	.typography {
 		display: grid;
@@ -403,6 +412,7 @@
 			}
 		}
 		&-checkboxs {
+			grid-template-columns: repeat(2, 1fr);
 			margin-top: 32px;
 			.checkbox-wrapper {
 				display: flex;

@@ -1,4 +1,119 @@
 @media screen and (max-width: 736px) {
+	h1 {
+		@each $property, $value in $font-styles-h1-mobile {
+			#{$property}: $value;
+		}
+	}
+	h2 {
+		@each $property, $value in $font-styles-h2-mobile {
+			#{$property}: $value;
+		}
+	}
+	h3 {
+		@each $property, $value in $font-styles-h3-mobile {
+			#{$property}: $value;
+		}
+	}
+	input {
+		&::placeholder {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			@each $property, $value in $font-styles-p14 {
+				#{$property}: $value;
+			}
+		}
+	}
+
+	.header__menu-content {
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 24px;
+		.content-bg {
+			width: calc(100% - 16px);
+		}
+		.content-wrapper {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			grid-column: span 4;
+			.content-info {
+				grid-column: span 3;
+			}
+		}
+	}
+
+	.content {
+		.intro-text,
+		.grid-text {
+			grid-template-columns: 1fr;
+		}
+		.text-level {
+			@each $property, $value in $font-styles-lead-mobile {
+				#{$property}: $value;
+			}
+		}
+		.grid-parameters {
+			.parameter-value {
+				@each $property, $value in $font-styles-lead-mobile {
+					#{$property}: $value;
+				}
+			}
+		}
+		.typography {
+			.typography-text {
+				grid-column: span 9;
+			}
+			.typography-tabs {
+				.tab-content {
+					&-item > div:first-child {
+						@each $property, $value in $font-styles-p12 {
+							#{$property}: $value;
+						}
+					}
+				}
+			}
+		}
+		.ui-area {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.ui-dropdown {
+			row-gap: 60px;
+			.dropdown {
+				input {
+					@each $property, $value in $font-styles-p14 {
+						#{$property}: $value;
+					}
+				}
+			}
+			.general-dropdown .options {
+				z-index: 10;
+				background: white;
+			}
+		}
+		.ui-checkboxs {
+			.checkbox-wrapper {
+				justify-content: space-between;
+				.checkbox {
+					@each $property, $value in $font-styles-p14 {
+						#{$property}: $value;
+					}
+				}
+			}
+			.radio-wrapper {
+				justify-content: space-between;
+				.radio {
+					@each $property, $value in $font-styles-p14 {
+						#{$property}: $value;
+					}
+				}
+			}
+		}
+		.ui-button {
+			row-gap: 60px;
+			column-gap: 10px;
+		}
+	}
+}
+
+@media screen and (max-width: 856px) {
 	body {
 		grid-template-rows: auto auto 1fr;
 		grid-template-columns: repeat(4, 1fr);
@@ -14,39 +129,24 @@
 		}
 		padding: 0 10px;
 	}
-	h1 {
-		@each $property, $value in $font-styles-h1-mobile {
-			#{$property}: $value;
-		}
-  }
-  h2 {
-		@each $property, $value in $font-styles-h2-mobile {
-			#{$property}: $value;
-		}
-  }
-  h3 {
-		@each $property, $value in $font-styles-h3-mobile {
-			#{$property}: $value;
-		}
-  }
-
-	.text-level {
-		@each $property, $value in $font-styles-lead-mobile {
-			#{$property}: $value;
-		}
+	.navigation ul {
+		flex-direction: row;
+		justify-content: center;
+		gap: 10px;
+		margin-top: 30px;
+		margin-bottom: 30px;
 	}
-
-	.grid-parameters {
-		.parameter-value {
-			@each $property, $value in $font-styles-lead-mobile {
-				#{$property}: $value;
+	.content {
+		.intro-text,
+		.grid-text {
+			grid-template-columns: 1fr;
+		}
+		.typography {
+			.typography-text {
+				grid-column: span 9;
 			}
 		}
 	}
-
-
-
-
 }
 
 @media screen and (min-width: 736px) {
@@ -64,6 +164,19 @@
 			grid-column: span 6;
 		}
 	}
+
+	.header__menu-content {
+		grid-template-columns: repeat(8, minmax(56px, 88px));
+		grid-column-gap: 32px;
+		.content-bg {
+			width: 80%;
+		}
+		.content-wrapper {
+			.content-info {
+				grid-column: span 5;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -79,6 +192,12 @@
 		}
 		.content {
 			grid-column: span 9;
+		}
+	}
+	.header__menu-content {
+		grid-template-columns: repeat(12, minmax(60px, 80px));
+		.content-bg {
+			width: 60%;
 		}
 	}
 }
